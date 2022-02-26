@@ -14,8 +14,8 @@
 %   nItMax  - (integer, scalar)             Max number of iterations                (optional)
 %
 % OUTPUT:
-%   xm	- (double, vector) 	Solution to equation
-%			Dimension is [n, nIterations]
+%   xm  - (double, vector) 	Solution to equation
+%       Dimension is [n, nIterations]
 %
 function xm = nleq_broyden(xv0, f, par, J, tol, nItMax)
 
@@ -26,20 +26,20 @@ function xm = nleq_broyden(xv0, f, par, J, tol, nItMax)
 	
 	% Initiate Broyden approximation to Jacobian
 	if not( isempty ( J ) )
-		Br = inv( feval( J, xv, par) );
+        Br = inv( feval( J, xv, par) );
 	else
-		Br = eye(n);
+        Br = eye(n);
 	end
 	M = zeros(n);
 	
 	% Make sure tolerance is set
 	if isempty(tol)
-		tol = 1.e-10;
+        tol = 1.e-10;
 	end
 	
 	% Make sure max. iterations is set
 	if isempty(nItMax)
-		nItMax = 1000;
+        nItMax = 1000;
 	end
 	
 	% Allocate solutions matrix, with sufficient space
@@ -58,8 +58,8 @@ function xm = nleq_broyden(xv0, f, par, J, tol, nItMax)
 		
 		% Check for convergence
 		if norm(fr) < tol || nIt >= nItMax
-			bConverged = 1;
-			break;
+            bConverged = 1;
+            break;
 		end
 		
 		% Do "Newton Iteration" step
@@ -70,7 +70,7 @@ function xm = nleq_broyden(xv0, f, par, J, tol, nItMax)
 		dfr = feval(f, xv, par) - fr;
 		fr  = fr + dfr;
 		oyp = Br*dfr - pr;
-		pB	= pr' * Br;
+		pB  = pr' * Br;
 		for i=1:n
 			for j=1:n
 				M(i,j) = oyp(i) * pB(j);
