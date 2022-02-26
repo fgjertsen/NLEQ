@@ -3,15 +3,15 @@
 %
 % DESCRIPTION:
 %   Find the solution for a nonlinear (set of) equation(s)
-%		on the form Ax = b, by iteration, using Broydens method
+%    on the form Ax = b, by iteration, using Broydens method
 %
 % INPUT:
-%   xv0		- (double, vector) 				Initial guess for solution
-%   f   	- (fhandle(double, vector))		Function to solve, f(x, par) = 0
-%	par		- (double, struct)				System specific parameters
-%	J 		- (fhandle(double, matrix)) 	Function to calculate Jacobian, df/dx.	(optional)
-%	tol		- (double, scalar)				Tolerance for iteration convergence 	(optional)
-%	nItMax	- (integer, scalar)				Max number of iterations 				(optional)
+%   xv0     - (double, vector)              Initial guess for solution
+%   f       - (fhandle(double, vector))     Function to solve, f(x, par) = 0
+%   par     - (double, struct)              System specific parameters
+%   J       - (fhandle(double, matrix))     Function to calculate Jacobian, df/dx.  (optional)
+%   tol     - (double, scalar)              Tolerance for iteration convergence     (optional)
+%   nItMax	- (integer, scalar)             Max number of iterations                (optional)
 %
 % OUTPUT:
 %   xm	- (double, vector) 	Solution to equation
