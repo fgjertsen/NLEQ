@@ -11,7 +11,7 @@
 %   par     - (double, struct)              System specific parameters
 %   J       - (fhandle(double, matrix))     Function to calculate Jacobian, df/dx.  (optional)
 %   tol     - (double, scalar)              Tolerance for iteration convergence     (optional)
-%   nItMax	- (integer, scalar)             Max number of iterations                (optional)
+%   nItMax  - (integer, scalar)             Max number of iterations                (optional)
 %
 % OUTPUT:
 %   xm	- (double, vector) 	Solution to equation

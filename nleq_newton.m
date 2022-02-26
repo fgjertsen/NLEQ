@@ -9,7 +9,7 @@
 %   xv0     - (double, vector)              Initial guess for solution
 %   f       - (fhandle(double, vector))     Function to solve, f(x, par) = 0
 %   par     - (double, struct)              System specific parameters
-%   J       - (fhandle(double, matrix)) 	Function to calculate Jacobian, df/dx.
+%   J       - (fhandle(double, matrix))     Function to calculate Jacobian, df/dx.
 %   tol     - (double, scalar)              Tolerance for iteration convergence     (optional)
 %   nItMax  - (integer, scalar)             Max number of iterations                (optional)
 %

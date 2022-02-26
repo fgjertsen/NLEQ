@@ -3,7 +3,7 @@
 % Eq:
 %   x1^2    +   x2^2    +   x3^2    = 3
 %   x1^2    +   x2^2    -   x3	    = 1
-%   x1      +   x2	    +   x3	    = 3
+%   x1      +   x2      +   x3	    = 3
 
 % Jac.
 %   2x  2y  2z
@@ -41,10 +41,10 @@ function nleq_example_comparison
     h = figure;
     set( h, 'Position', [100 100 1000 500] );
     for i = 1:n
-        subplot(1,n,i); plot(0:nIter_newton,	xm_newton(i,:), 'Color', 'blue'); hold on;
-                        plot(0:nIter_broyden,	xm_broyden(i,:), 'Color', 'red');
-                        plot(nIter_newton, 	xm_newton(i, end), 'Color', 'blue', 'Marker', '*');
-                        plot(nIter_broyden, xm_broyden(i, end), 'Color', 'red', 'Marker', '*');
+        subplot(1,n,i); plot(0:nIter_newton,	xm_newton(i,:),     'Color', 'blue'); hold on;
+                        plot(0:nIter_broyden,	xm_broyden(i,:),    'Color', 'red');
+                        plot(nIter_newton,      xm_newton(i, end),  'Color', 'blue', 'Marker', '*');
+                        plot(nIter_broyden,     xm_broyden(i, end), 'Color', 'red', 'Marker', '*');
             title(['x' num2str(i)]);
             legend('Newton', 'Broyden', 'Location', 'northeast');
     end
